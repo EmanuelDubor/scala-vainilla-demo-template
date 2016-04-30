@@ -1,0 +1,11 @@
+include 'core'
+findProject(':core')?.name = 'demo-core'
+include 'desktop'
+findProject(':desktop')?.name = 'demo-desktop'
+
+include ':vainilla-core'
+project(':vainilla-core').projectDir = new File(settingsDir, '../scala-vainilla/core')
+
+include ':vainilla-desktop'
+project(':vainilla-desktop').projectDir = new File(settingsDir, '../scala-vainilla/desktop')
+
