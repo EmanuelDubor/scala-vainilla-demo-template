@@ -36,34 +36,20 @@ allprojects {
     }
 }
 
-project(":demo-core") {
-    dependencies {
-        compile project(":vainilla-core")
-        compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-    }
-}
-
-project(":demo-desktop") {
-    dependencies {
-        compile project(":demo-core")
-        compile project(":vainilla-desktop")
-    }
-}
-
-project(":vainilla-core") {
-    dependencies {
-        compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-    }
-}
-
-project(":vainilla-desktop") {
-    dependencies {
-        compile project(":vainilla-core")
-        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
-        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-        compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
-    }
-}
+//project(":vainilla-core") {
+//    dependencies {
+//        compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+//    }
+//}
+//
+//project(":vainilla-desktop") {
+//    dependencies {
+//        compile project(":vainilla-core")
+//        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+//        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+//        compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+//    }
+//}
 
 tasks.eclipse.doLast {
     delete ".project"

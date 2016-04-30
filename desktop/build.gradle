@@ -8,6 +8,11 @@ sourceSets.main.scala.srcDirs = [ "src/" ]
 project.ext.mainClassName = "edu.unq.vainilla.arkanoid.desktop.DesktopLauncher"
 project.ext.assetsDir = new File("../core/assets");
 
+dependencies {
+    compile project(":demo-core")
+    compile project(":vainilla-desktop")
+}
+
 task run(dependsOn: classes, type: JavaExec) {
     main = project.mainClassName
     classpath = sourceSets.main.runtimeClasspath

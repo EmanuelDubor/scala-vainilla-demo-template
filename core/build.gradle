@@ -8,6 +8,11 @@ sourceSets.main.java.srcDirs = ["src/"]
 sourceSets.main.scala.srcDirs = ["src/"]
 
 
+dependencies {
+    compile project(":vainilla-core")
+    compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+}
+
 eclipse.project {
     name = appName + "-demo-core"
 }
