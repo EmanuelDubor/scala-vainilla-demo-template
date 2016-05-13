@@ -5,7 +5,7 @@ sourceCompatibility = 1.6
 sourceSets.main.java.srcDirs = [ "src/" ]
 sourceSets.main.scala.srcDirs = [ "src/" ]
 
-project.ext.mainClassName = "edu.unq.vainilla.arkanoid.desktop.DesktopLauncher"
+project.ext.mainClassName = "edu.unq.vainilla.demo.desktop.DesktopLauncher"
 project.ext.assetsDir = new File("../core/assets");
 
 dependencies {
