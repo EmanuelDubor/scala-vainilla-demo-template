@@ -15,7 +15,7 @@ allprojects {
 
     version = '1.0'
     ext {
-        appName = "scala-vanilla"
+        appName = "scala-vanilla-demo"
         scalaVersion = '2.11.7'
     }
 

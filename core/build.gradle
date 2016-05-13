@@ -13,5 +13,5 @@ dependencies {
 }
 
 eclipse.project {
-    name = appName + "-demo-core"
+    name = appName + "-core"
 }
