@@ -19,3 +19,7 @@
 ## How to run?
 
 Just run your launcher class and dont forget to set its working directory to `/core/assets`.
+
+#### Some sample projects
+
+* [Arkanoid](https://github.com/EmanuelDubor/scala-vainilla-demo-arkanoid)
