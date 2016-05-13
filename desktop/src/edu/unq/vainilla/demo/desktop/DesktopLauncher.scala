@@ -1,18 +1,18 @@
 package edu.unq.vainilla.demo.desktop
 
-import edu.unq.vainilla.demo.{DemoGame, GameConfigurator}
-import edu.unq.vainilla.desktop.VanillaEngine
+import edu.unq.vainilla.demo.{DemoMainScene, GameConfigurator}
+import edu.unq.vainilla.desktop.VainillaEngine
 
 object DesktopLauncher {
 
   def main(args: Array[String]) {
-    VanillaEngine.mainScene = new DemoGame
-    VanillaEngine.configurators += new GameConfigurator
-    VanillaEngine.configurators += new DesktopConfigurator
-    VanillaEngine.delegateInput   //Use this if you want your scenes to handle user input
-//    VanillaEngine.inputHandler = new YourInputHandler //Manually set a single input handler
+    VainillaEngine.mainScene = new DemoMainScene
+    VainillaEngine.configurators += new GameConfigurator
+    VainillaEngine.configurators += new DesktopConfigurator
+    VainillaEngine.delegateInput //Use this if you want your scenes to handle user input
+    //    VainillaEngine.inputHandler = new YourInputHandler //Manually set a single input handler
 
-    VanillaEngine.start
+    VainillaEngine.start
   }
 
 }
