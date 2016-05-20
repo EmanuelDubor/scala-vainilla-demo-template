@@ -8,18 +8,28 @@
 4. `$ cd your-project-name`
 5. `$ git remote rm origin`
 6. `$ git remote add origin your-repo-url`
-7. Open `setting.gradle` and rename your game projects core and target platform(s).
+7. Open `settings.gradle` and rename your game projects core and target platform(s).
     * `demo-core -> your-game-core`
     * `demo-desktop -> your-game-desktop`
 8. Open `build.gradle` and change `appName`
-9. Open `desktop/build.gradle` and update dependency on `demo-core` to `your-game-core`
-10. Rename main package and/or launcher class and update `project.ext.mainClassName` in `desktop/build.gradle`
-11. Profit!
 
-## How to run?
+## For Desktop
 
-Just run your launcher class and dont forget to set its working directory to `/core/assets`.
+1. Open `desktop/build.gradle` and update dependency on `demo-core` to `your-game-core`
+2. Rename main package and/or launcher class and update `project.ext.mainClassName` in `desktop/build.gradle`
+3. Profit!
 
-#### Some sample projects
+#### How to run?
+
+1. `$ cd desktop`
+2. `$ gradle run`
+
+#### How to make a .jar?
+
+1. `$ cd desktop`
+2. `$ gradle dist`
+3. Look for `your-game-desktop.jar` in `desktop/build/libs`
+
+## Some sample projects
 
 * [Arkanoid](https://github.com/EmanuelDubor/scala-vainilla-demo-arkanoid)
