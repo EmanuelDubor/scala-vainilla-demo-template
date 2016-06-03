@@ -1,7 +1,7 @@
 package edu.unq.vainilla.demo
 
 import com.badlogic.gdx.graphics.Texture
-import edu.unq.vainilla.core.appearence.Appearence
+import edu.unq.vainilla.core.cords.CordImplicits._
 import edu.unq.vainilla.core.gamecomponent.{GameComponent, SimpleGameComponent}
 import edu.unq.vainilla.core.gamescene.SimpleGameScene
 import edu.unq.vainilla.core.input.{SimpleInputHandler, TouchDown}
@@ -13,14 +13,12 @@ class DemoMainScene extends SimpleGameScene with SimpleInputHandler {
   override def create {
     super.create
     val img = new Texture("badlogic.jpg")
-    badlogicLogo = new SimpleGameComponent(Appearence(img))
+    badlogicLogo = new SimpleGameComponent(img)
     components += badlogicLogo
   }
 
   override def touchDown: PartialFunction[TouchDown, Unit] = {
-    case TouchDown(screenCords, _, _) =>
-      val cords = screenCords.localize
-      badlogicLogo.position = cords
+    case TouchDown(cords, _, _) => badlogicLogo.position = cords
   }
 
 }
