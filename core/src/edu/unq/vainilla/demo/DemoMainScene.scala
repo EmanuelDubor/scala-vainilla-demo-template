@@ -11,6 +11,8 @@ class DemoMainScene extends SimpleGameScene with SimpleInputHandler {
   var badlogicLogo: GameComponent = _
 
   override def create {
+    import edu.unq.vainilla.core.appearence.AppearenceDSL._
+
     super.create
     val img = new Texture("badlogic.jpg")
     badlogicLogo = new SimpleGameComponent(img)
